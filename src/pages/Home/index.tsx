@@ -51,7 +51,8 @@ const WeatherPage: React.FC = () => {
     useEffect(() => {
         // @ts-ignore
         dispatch(fetchWeather(searchLocation || DEFAULT_COUNTRY_NAME));
-    }, [dispatch, userLocation, searchLocation]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dispatch, userLocation]);
 
     useEffect(() => {
         if (weather) {
