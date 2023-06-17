@@ -51,7 +51,7 @@ const WeatherPage: React.FC = () => {
     useEffect(() => {
         // @ts-ignore
         dispatch(fetchWeather(searchLocation || DEFAULT_COUNTRY_NAME));
-    }, [dispatch, userLocation]);
+    }, [dispatch, userLocation, searchLocation]);
 
     useEffect(() => {
         if (weather) {
